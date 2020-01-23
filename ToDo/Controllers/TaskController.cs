@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using Threading = System.Threading;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ToDo.Models;
@@ -13,11 +11,11 @@ namespace ToDo.Controllers
     public class TaskController : ControllerBase
     {
         private readonly ILogger<TaskController> _logger;
-        private readonly List<Task> _todos = new List<Task>
+        private readonly List<TodoTask> _todos = new List<TodoTask>
         {
-            new Task { Title = "learn C#" },
-            new Task { Title = "learn dot.net" },
-            new Task { Title = "learn db" },
+            new TodoTask { Title = "learn C#" },
+            new TodoTask { Title = "learn dot.net" },
+            new TodoTask { Title = "learn db" },
         };
 
         public TaskController(ILogger<TaskController> logger)
